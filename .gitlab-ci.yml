@@ -1,0 +1,40 @@
+stages:
+  - lint
+  - test
+  - build
+  - deploy
+
+lint:
+  stage: lint
+  image: python:3.11
+
+  script:
+    - pip install flake8
+    - flake8 .
+
+test:
+  stage: test
+  image: python:3.11
+
+  script:
+    - pip install -r requirements.txt
+    - python -m pytest
+
+build:
+  stage: build
+  image: docker:latest
+
+  services:
+    - docker:dind
+
+  script:
+    - docker build -t trainee-api .
+
+deploy:
+  stage: deploy
+
+  script:
+    - echo "Simulando deploy AWS ECS"
+
+  only:
+    - main
