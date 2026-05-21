@@ -138,17 +138,6 @@ terraform apply
 
 ---
 
-## O que Faria com Mais Tempo
-
-- **Ambiente de staging:** Deploy automático em staging antes de produção, com testes de integração.
-- **Terraform completo:** VPC, subnets privadas, NAT Gateway, Application Load Balancer.
-- **Rollback automático:** Se o healthcheck falhar após o deploy, reverter automaticamente para a versão anterior.
-- **Notificações:** Alertas no Slack para falhas de pipeline e deploys bem-sucedidos.
-- **Auto Scaling:** Escalabilidade automática do ECS baseada em uso de CPU/memória.
-- **Secrets Manager:** Variáveis sensíveis no AWS Secrets Manager em vez de variáveis de CI.
-
----
-
 ## Como Usei IA neste Desafio
 
 Utilizei o **Claude (Anthropic)** como ferramenta de apoio durante o desafio.
